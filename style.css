@@ -1,0 +1,559 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #3f4c7a, #15e085);
+    background-size: 200% 200%;
+    color: #000000;
+    overflow-x: hidden;
+    font-size: 12px;
+    animation: scaleBackground 5s ease infinite;
+}
+
+@keyframes scaleBackground {
+    0% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 200% 200%;
+    }
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+    background-color: #14213d;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+header h1 {
+    font-size: 2.5em;
+    animation: slideIn 1s ease-out;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Estilo general para la navegaci n */
+nav {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px 0;
+}
+
+
+nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+}
+
+
+nav ul li {
+    margin: 0 15px; 
+}
+
+
+nav ul li a {
+    color: #fca311; 
+    text-decoration: none; 
+    font-size: 16px;
+    transition: color 0.3s ease; 
+}
+
+
+nav ul li a:hover {
+    color: #e5e5e5; 
+}
+
+
+/* Botón de ir al inicio */
+#myBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: #3d97c4;
+    transition: background-color 0.3s ease;
+}
+
+/* Sección de Introducción */
+.intro {
+    padding: 40px 20px; 
+    background-color: #14213d; 
+    color: #ffffff;
+    text-align: center; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin: 20px auto; 
+    max-width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    animation: fadeIn 1.5s ease-in-out; 
+}
+
+    /* Estilo del encabezado */
+    .intro h2 {
+    font-size: 2.5em; 
+    margin-bottom: 10px; 
+    font-family: 'Roboto', sans-serif; 
+}
+
+    .intro p {
+    font-size: 1.2em; 
+    line-height: 1.6; 
+    font-family: 'Arial', sans-serif; 
+    margin: 0; 
+}
+
+
+/* Sección de servicios */
+    .services {
+    padding: 40px 0;
+    background-color: #fca311;
+    animation: fadeIn 2s ease-in;
+    display: flex;
+    justify-content: center; 
+}
+
+    .services .container {
+    max-width: 1200px; 
+    width: 100%;
+    padding: 0 20px; 
+    text-align: center; 
+}
+
+    /* Encabezado de la sección */
+    .services h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+    /* Elemento del servicio */
+    .service-item {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(145, 114, 161, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    animation: fadeInUp 1s ease-in;
+    text-align: center; 
+    border: 2px solid transparent; 
+    font-size: 1.2em; 
+}
+    /* Elemento del servicio */
+    .service-item a {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 1.2em; 
+    }
+
+    /* Efecto de zoom y sombra en hover */
+    .service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #14213d; 
+}
+
+/* Sección sobre la importancia de los datos */
+.importance {
+    padding: 40px 0;
+    background-color: #ffffff;
+    animation: fadeIn 2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid #14213d;
+    }
+
+.importance:hover {
+    transform: scale(1.03); }
+
+.importance h2,
+.importance p,
+.importance ul {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    }
+
+.importance h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    }
+
+.importance p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+    animation: fadeInUp 1s ease-out 1s forwards;
+    }
+
+.importance ul li::before {
+    content: "✔"; 
+    position: relative;
+    left: -20px;
+    color: #057e1b; 
+    font-size: 1.5em;
+    line-height: 1;
+    }
+
+.importance li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    }
+
+@keyframes fadeInUp {
+    from {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }
+
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+    }
+
+/* Sección de datos procesados */
+.Data.process {
+    padding: 40px 20px;
+    background-color: #14213d; 
+    color: #b6aaaa; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s ease;
+    border: 2px solid #ddd; 
+    }
+
+.Data.process:hover {
+    transform: scale(1.05); 
+    }
+
+.Data.process h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #fca311; 
+ }
+
+.Data.process p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #e5e5e5; 
+}
+
+.Data.process ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+ }
+
+.Data.process ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    color: #e5e5e5; 
+}
+.Data.process ul li::before {
+    content: "✔"; 
+    position: relative;
+    left: -20px;
+    color: #fca311; 
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+    opacity: 0;
+}
+    100% {
+    opacity: 1;
+}
+}
+
+
+/* Sección de Datos Interesantes sobre los Datos */
+.aspects {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Fondo claro para resaltar la sección */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border: 2px solid #14213d;
+}   
+.aspects:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.aspects h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #14213d; /* Color del encabezado */
+    font-family: 'Roboto', sans-serif;
+}
+
+.aspects img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.aspects ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 2%;
+    text-align: left;
+    max-width: 900px;
+}
+
+.aspects li {
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    position: relative;
+    color: #333; 
+}
+
+.aspects li::before {
+    content: "✔"; 
+    position: absolute;
+    left: -20px;
+    color: #057e1b; 
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+}
+    to {
+    opacity: 1;
+}
+}
+
+/* Aplicar animación de desvanecimiento */
+.aspects h2,
+.aspects img,
+.aspects ul,
+.aspects li {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.aspects h2 {
+    animation-delay: 0.5s;
+}
+
+.aspects img {
+    animation-delay: 1s;
+}
+
+.aspects ul {
+    animation-delay: 1.5s;
+}
+
+.aspects li {
+    animation-delay: 2s;
+}
+
+
+
+/* Sección de hechos impactantes */
+.facts {
+    padding: 40px 20px;
+    background-color: #14213d; 
+    color: #b6aaaa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 2s ease-in;
+    border: 2px solid #ddd; 
+}
+
+.facts:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.facts h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fca311; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.facts img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.facts ul {
+    list-style: none;
+    padding: 0;
+    max-width: 900px;
+    margin: 2%;
+    text-align: left;
+}
+
+.facts ul li {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+    color: #e5e5e5; 
+}
+
+.facts ul li::before {
+    content: "✔"; 
+    position: absolute;
+    left: -20px;
+    color: #fca311; 
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Aplicar animación de desvanecimiento */
+.facts h2,
+.facts img,
+.facts ul,
+.facts li {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.facts h2 {
+    animation-delay: 0.5s;
+}
+
+.facts img {
+    animation-delay: 1s;
+}
+
+.facts ul {
+    animation-delay: 1.5s;
+}
+
+.facts li {
+    text-align: justify;
+    animation-delay: 2s;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+img {
+  
+    width: 50%;
+    height: auto; 
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block; 
+    border-radius: 8px; 
+}
+
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
